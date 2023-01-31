@@ -1,0 +1,94 @@
+@import "./mixins.scss";
+@import "./fonts.scss";
+@import "./reset.scss";
+@import "./variables.scss";
+
+
+/*---------------------
+	Typography
+---------------------*/
+// @include heading(1, 58px/58px 'Copperplate'){
+// 	font-weight: bold;
+// }
+p {
+
+}
+strong {
+	font-weight: normal;
+}
+sup {
+	font-size: 11px;
+}
+/*---------------------
+	General
+---------------------*/
+body {
+	line-height: normal;
+	font-family: $base-font-family;
+	font-size: $base-font-size;
+	color: $clr-default;
+}
+/* Links */
+a,
+a:link,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+	text-decoration:none;
+	outline: none;
+	color: inherit;
+}
+a {	
+	transition: $transition;
+}
+img{
+	max-width: 100%;
+}
+/* Containers */
+.container{
+	max-width: 1680px;
+	margin: 0 auto;
+	padding: 0 70px;
+}
+.title {
+    text-transform: uppercase;
+    font-size: 40px;
+    font-family: $base-font-family-title;
+    font-weight: bold;
+}
+/* Buttons */
+%button {
+	display: inline-block;
+	vertical-align: top;
+	letter-spacing: 0.5px;
+	white-space: nowrap;
+	text-transform: uppercase;
+    text-align: center;
+}
+/*.btn {
+	@extend %button; 
+	font: 1em 'OpenSans-ExtraBold';
+    min-width: 210px;
+    padding: 14px 20px 13px;
+    border: 5px solid $clr-btn;
+    color: $clr-txt-btn;
+    @include transition($transition);
+    &:hover{
+    	color: $clr-invert;
+		background-color: $clr-btn;
+    }
+    & i:before{
+		color: $clr-invert;
+	}
+	&.filled{
+		background: $clr-btn-dark;
+		border-color: $clr-btn-dark;
+		color: #fff;
+		&:hover{
+			color: #fff;
+			background-color: $clr-btn;
+			border-color: $clr-btn;
+		}
+	}
+}*/

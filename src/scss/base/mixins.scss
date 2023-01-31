@@ -1,0 +1,36 @@
+@mixin font($font-family, $file-name, $weight: normal, $style: normal) {
+
+	@font-face {
+		font-family: $font-family;
+		font-display: swap;
+		src: url("../fonts/#{$file-name}.woff") format("woff"), url("../fonts/#{$file-name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+@mixin heading($i, $font, $font-weight: normal, $text-transform: uppercase){
+    h#{$i}{
+		font: $font;
+		font-weight: $font-weight;
+		text-transform: $text-transform;
+		@content;
+    }
+}
+
+@mixin icon($width, $height, $name, $radius: false){
+	@extend %icon;
+	width: $width;
+	height: $height;
+	background: url(#{$img-icons}#{$name});
+	@if $radius == 'radius'{
+		border-radius: 50%;
+	}
+	@content;
+}
+
+
+@mixin mq {
+    @media (max-width: 700px) {
+        @content;
+    }
+}
